@@ -1,0 +1,42 @@
+{
+  "name": "@local/dsh-important-day",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "重要日：用公历或农历记下生日、纪念日、节日，并在 DSH 设置面板里显示还有多少天或已经过去了多少天；数据以 Markdown 文档保存在本机。",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node test/run-tests.mjs && node test/host-smoke.mjs && node test/client-static.mjs && node test/client-render.mjs && node test/client-interaction.mjs && node test/lunar-guard.mjs && node test/verify-fixes.mjs && node test/e2e-sim.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

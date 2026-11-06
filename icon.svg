@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="重要日">
+  <defs>
+    <linearGradient id="idayCover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f8ef7"/>
+      <stop offset="1" stop-color="#2f6ae0"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="12" width="54" height="47" rx="9" fill="#ffffff"/>
+  <path d="M5 21a9 9 0 0 1 9-9h36a9 9 0 0 1 9 9v6H5z" fill="url(#idayCover)"/>
+  <rect x="5.5" y="12.5" width="53" height="46" rx="8.5" fill="none" stroke="#2f6ae0" stroke-opacity="0.35"/>
+  <rect x="17" y="6" width="5" height="12" rx="2.5" fill="#2f6ae0"/>
+  <rect x="42" y="6" width="5" height="12" rx="2.5" fill="#2f6ae0"/>
+  <g fill="#c9d8ef">
+    <rect x="15" y="32" width="7" height="6" rx="1.6"/>
+    <rect x="28.5" y="32" width="7" height="6" rx="1.6"/>
+    <rect x="42" y="32" width="7" height="6" rx="1.6"/>
+    <rect x="15" y="43" width="7" height="6" rx="1.6"/>
+    <rect x="42" y="43" width="7" height="6" rx="1.6"/>
+  </g>
+  <path d="M32 55c-6.2-4.4-9.6-7.6-9.6-11.2a4.9 4.9 0 0 1 9.6-1.8 4.9 4.9 0 0 1 9.6 1.8c0 3.6-3.4 6.8-9.6 11.2z" fill="#e8474f"/>
+</svg>

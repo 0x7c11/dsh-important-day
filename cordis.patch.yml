@@ -1,0 +1,17 @@
+# 重要日 bundle patch：插入一条 loader entry 挂载 Host 半身。
+#
+# 浏览器半身由 package.json 的 dsh.client 声明，绑定在 name 为裸包名的这一行上。
+#
+# 想换数据目录时，在 profile 的 cordis.patch.yml 里用同一个 id 覆盖 config
+# （loader 是整体替换 config，不是深合并）：
+#
+#   - id: important-day
+#     config:
+#       dataDir: 'D:/我的重要日'
+#
+- insert:
+    - id: important-day
+      name: '@local/dsh-important-day'
+      config:
+        # 留空 = 默认 %DSH_HOME%/important-day（Windows 下即 C:\Users\<你>\.dsh\important-day）
+        dataDir: ''
